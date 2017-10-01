@@ -90,5 +90,5 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 FEED_EXPORTERS = {
-    'csv': 'project.exporters.FixLineCsvItemExporter',
+    'csv': 'relationalstocks_crawler.exporters.FixLineCsvItemExporter',
 }
