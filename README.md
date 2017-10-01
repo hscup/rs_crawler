@@ -14,6 +14,9 @@ Fields collected:
 - Value
 
 Output data is `CSV` format:
+
+![Alt text](./relationalstocks_crawler/img/data.png?raw=true)
+
 ```
 report_time,trans_date,company,ticker,insider,shares_trader,avg_price,value
 09-29-2017,2017-09-28 ,PATRICK INDUSTRIES INC,PATK,"NEMETH ANDY L
