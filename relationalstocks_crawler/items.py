@@ -8,7 +8,7 @@
 import scrapy
 
 
-class RelationalstocksCrawlerItem(scrapy.Item):
+class InsiderCrawlerItem(scrapy.Item):
     report_time = scrapy.Field()
     trans_date = scrapy.Field()
     company = scrapy.Field()

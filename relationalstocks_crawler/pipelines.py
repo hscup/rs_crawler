@@ -2,7 +2,7 @@ import csv
 
 from relationalstocks_crawler.exporters import FixLineCsvItemExporter
 
-class RelationalstocksCrawlerPipeline(object):
+class InsiderCrawlerPipeline(object):
 
     def __init__(self):
         self.file = open('items.csv', 'wb')

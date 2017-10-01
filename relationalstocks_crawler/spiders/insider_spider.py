@@ -2,12 +2,13 @@ from datetime import datetime
 
 import scrapy
 
-from relationalstocks_crawler.items import RelationalstocksCrawlerItem
+from relationalstocks_crawler.items import InsiderCrawlerItem
 
 
-class RelationalstocksSpider(scrapy.Spider):
-    name = 'rs'
+class InsiderSpider(scrapy.Spider):
+    name = 'insider'
     allowed_domains = ['relationalstocks.com']
+    
     start_urls = [
         'http://relationalstocks.com/showinsiders.php?date=2017-09-29&buysell=buysell']
 
@@ -18,7 +19,7 @@ class RelationalstocksSpider(scrapy.Spider):
     def parse(self, response):
         rows = response.xpath('.//tbody[@id="insidertab"]/tr')
 
-        item = RelationalstocksCrawlerItem()
+        item = InsiderCrawlerItem()
 
         for row in rows:
             report_time = row.xpath('.//td[1]/text()').extract_first()

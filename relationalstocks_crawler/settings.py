@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'relationalstocks_crawler.pipelines.RelationalstocksCrawlerPipeline': 500,
+   'relationalstocks_crawler.pipelines.InsiderCrawlerPipeline': 500,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
