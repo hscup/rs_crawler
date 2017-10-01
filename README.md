@@ -46,9 +46,14 @@ CEO, Director","10,000",$83.16,"$831,600"
     pip install Scrapy
     ```
 
-3. Clone
+3. Clone and run
     ```bash
     git clone https://github.com/hscup/rs_crawler.git
     cd re_crawler
+
+    # This default will generate a csv file with name: items.csv
     scrapy crawl rs
+
+    # You can set file name as you want for example 'data.csv' by
+    scrapy crawl rs -o data.csv -t csv
     ```
