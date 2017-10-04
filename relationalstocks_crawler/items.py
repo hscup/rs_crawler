@@ -17,3 +17,11 @@ class InsiderCrawlerItem(scrapy.Item):
     shares_trader = scrapy.Field()
     avg_price = scrapy.Field()
     value = scrapy.Field()
+
+
+class InstitutionCrawlerItem(scrapy.Item):
+    company = scrapy.Field()
+    ticket = scrapy.Field()
+    value_on = scrapy.Field()
+    no_of_shares = scrapy.Field()
+    percent_of_portfolio = scrapy.Field()

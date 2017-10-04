@@ -1,6 +1,21 @@
 # Relational Stocks Crawler
 
-Fields collected:
+:exclamation: This only works with Python 3
+
+## Disclaim:
+I followed the `robots.txt` in the [site](http://relationalstocks.com/robots.txt)
+
+```shell
+User-agent: *
+Crawl-delay: 120
+Disallow: /cgi-bin/
+```
+
+There are 2 script which crawl 2 type of data from Relational Stock site: [/instshow.php](http://relationalstocks.com/showinsiders.php?date={day}&buysell=buysell)  and [/showinsiders.php](http://relationalstocks.com/instshow.php?id=1&op=port&sort=percentdesc&page=1)
+
+## Crawled data example
+
+Fields collected from `/showinsiders.php`
 
 - Reported Time
 - Transaction
@@ -29,7 +44,7 @@ CEO, Director","10,000",$83.16,"$831,600"
 10% owner","19,286",$3.35,"$64,608"
 ```
 
-#### How to use
+## Install
 
 1. Install virtualenv via pip
     ```bash
@@ -54,9 +69,5 @@ CEO, Director","10,000",$83.16,"$831,600"
     git clone https://github.com/hscup/rs_crawler.git
     cd re_crawler
 
-    # This default will generate a csv file with name: items.csv
-    scrapy crawl rs
-
-    # You can set file name as you want for example 'data.csv' by
-    scrapy crawl rs -o data.csv -t csv
+    python run.py
     ```
